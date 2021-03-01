@@ -93,3 +93,9 @@
     height: 1.3rem;
     margin-left: 1.07rem;
 }
+
+@media(max-width: 600px) {
+    .countdownContainer > div {
+        font-size: 5.5rem;
+    }
+}
