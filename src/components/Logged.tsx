@@ -1,15 +1,13 @@
 import Link from 'next/link';
 import styles from '../styles/components/Logged.module.css';
 
-interface SplashProps {
+interface LoggedProps {
     name: string;
 };
 
-export default function logged({ name }: SplashProps) {
+export default function logged({ name }: LoggedProps) {
     return (
-        <div 
-            className={styles.container}
-        >
+        <div className={styles.container}>
             <img src="full-logo.svg" alt="Logo move.it"/>
 
             <h2>

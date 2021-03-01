@@ -1,14 +1,12 @@
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
 
 import styles from '../styles/pages/Login.module.css';
 import Logged from '../components/Logged';
 
 export default function Login() {
-    const router = useRouter();
     const [name, setName] = useState('');
     const [savedName, setSavedName] = useState('');
     const [logged, setLogged] = useState(false);
