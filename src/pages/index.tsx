@@ -1,61 +1,71 @@
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 import Head from 'next/head';
-import { GetServerSideProps } from 'next'
+import Link from 'next/link';
+import Cookies from 'js-cookie';
 
-import ExperienceBar from "../components/ExperienceBar";
-import Profile from "../components/Profile";
-import CompletedChallenges from "../components/CompletedChallenges";
-import Countdown from "../components/Countdown";
-import ChallengeBox from '../components/ChallengeBox';
+import styles from '../styles/pages/Login.module.css';
+import Logged from '../components/Logged';
 
-import styles from '../styles/pages/Home.module.css';
-import CountdownProvider from '../contexts/CountdownContext';
-import { ChallengesProvider } from '../contexts/ChallengesContext';
+export default function Login() {
+    const router = useRouter();
+    const [name, setName] = useState('');
+    const [savedName, setSavedName] = useState('');
+    const [logged, setLogged] = useState(false);
 
-interface HomeProps{
-	level: number;
-	currentExperience: number;
-	challengesCompleted: number;
-}
+    function saveNameInCookies() {
+        Cookies.set('name', name)
+    }
 
-export default function Home({ level, currentExperience, challengesCompleted }: HomeProps) {
-	return (
-		<ChallengesProvider 
-			level={level}
-			currentExperience={currentExperience}
-			challengesCompleted={challengesCompleted}		
-		>
-			<div className={styles.container}>
-				<Head>
-					<title>Início - move.it</title>
-				</Head>
+    useEffect(() => {
+        const moveitName = Cookies.get('name');
+        setLogged(true);
 
-				<ExperienceBar />
+        if (moveitName.length > 2) {
+            setSavedName(moveitName);
+        }
+    })
 
-				<CountdownProvider>
-					<section>
-						<div>
-							<Profile />
-							<CompletedChallenges />
-							<Countdown />
-						</div>
-						<div>
-							<ChallengeBox />
-						</div>
-					</section>
-				</CountdownProvider>
-			</div>
-		</ChallengesProvider>
-	)
-}
+    return (
+        <div className={styles.container}>
+            <Head>
+                <title>Login - move.it</title>
+            </Head>
+            
+            <img src="symbol.svg" alt="Símbolo moveit"/>
 
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-	const { level, currentExperience, challengesCompleted } = ctx.req.cookies
+            {
+                logged ? 
+                    <Logged name={savedName} />
+                :
+                (
+                    <div className={styles.section}>
+                        <img src="full-logo.svg" alt="Logo moveit"/>
 
-	return {
-		props: {
-			level: Number(level),
-			currentExperience: Number(currentExperience),
-			challengesCompleted: Number(challengesCompleted),
-		}
-	}
+                        <strong>Bem-vindo</strong>
+
+                        <p>
+                            Cuide da saúde do seu corpo com
+                            <br />
+                            move.it
+                        </p>
+
+                        <div className={styles.inputBox}>
+                            <input 
+                                type="text"  
+                                placeholder="Digite seu nome"
+                                value={name}
+                                onChange={(ev) => setName(ev.target.value)} 
+                            />
+                            <Link href="/home">
+                                <button type="button" onClick={saveNameInCookies}>
+                                    <img src="icons/arrow.svg" alt="Seta para direita"/>
+                                </button>
+                            </Link>
+                        </div>
+                    </div>
+                )
+            }
+        </div>
+    );
 }

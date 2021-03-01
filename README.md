@@ -34,6 +34,17 @@ You can start the clock to start your activity, and after 25minutes, the app wil
 a challenge, that if you did it, you can click on button 'Completei', and if you didnt click on button 'Falhei'.
 If you completed the challenge, you will gain experience that will allow you to move on to the next level and so on.
 
+
+<br/>
+
+![login](public/images/moveit-login.png)
+
+
+<br/>
+
+![login forward](public/images/moveit-login-forward.png)
+
+
 <br/>
 
 ![homepage](public/images/moveit-home.png)
