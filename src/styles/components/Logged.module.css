@@ -81,26 +81,10 @@
         width: 100%;
         height: 100%;
 
-        animation-name: mobile-entrance;
-        animation-duration: 1.1s;
-        animation-timing-function: ease-out;
-        animation-delay: 0s;
-        animation-fill-mode: backwards;
-
-        transition: opacity .1s;
+        animation-name: none;
     }
 
     .container h2 {
         font-size: 1.4rem;
-    }
-
-    @keyframes mobile-entrance {
-        0% {
-            transform: translateY(-100%);
-        }
-
-        100% {
-            transform: translateY(0%);
-        }
     }
 }
