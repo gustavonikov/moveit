@@ -5,7 +5,7 @@ interface LoggedProps {
     name: string;
 };
 
-export default function logged({ name }: LoggedProps) {
+export default function Logged({ name }: LoggedProps) {
     return (
         <div className={styles.container}>
             <img src="full-logo.svg" alt="Logo move.it"/>
