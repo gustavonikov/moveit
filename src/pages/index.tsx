@@ -5,23 +5,25 @@ import Cookies from 'js-cookie';
 
 import styles from '../styles/pages/Login.module.css';
 import Logged from '../components/Logged';
+import { GetServerSideProps } from 'next';
 
-export default function Login() {
+interface LoginProps {
+    username: string;
+};
+
+export default function Login({ username }: LoginProps) {
     const [name, setName] = useState('');
     const [savedName, setSavedName] = useState('');
     const [logged, setLogged] = useState(false);
 
     function saveNameInCookies() {
-        console.log(name)
         Cookies.set('name', name);
     }
 
     useEffect(() => {
-        const moveitName = Cookies.get('name');
-
-        if (moveitName) {
-            setLogged(true)
-            setSavedName(moveitName);
+        if (username) {
+            setLogged(true);
+            setSavedName(username);
         }
     }, [])
 
@@ -67,4 +69,14 @@ export default function Login() {
             }
         </div>
     );
+}
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+	const { name } = ctx.req.cookies;
+
+	return {
+		props: {
+			username: name,
+		}
+	}
 }
