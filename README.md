@@ -7,7 +7,7 @@ App made at Rocket Seat's event Next Level Week #04, which purpose is to help yo
 
 ## Getting Started
 
-After install the packages necessarily, run the development server:
+After install the necessarily packages, run the development server:
 
 ```bash
 npm run dev
