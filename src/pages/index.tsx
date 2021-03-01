@@ -12,14 +12,15 @@ export default function Login() {
     const [logged, setLogged] = useState(false);
 
     function saveNameInCookies() {
+        console.log(name)
         Cookies.set('name', name);
     }
 
     useEffect(() => {
         const moveitName = Cookies.get('name');
-        setLogged(true);
 
-        if (moveitName.length > 2) {
+        if (moveitName) {
+            setLogged(true)
             setSavedName(moveitName);
         }
     }, [])
