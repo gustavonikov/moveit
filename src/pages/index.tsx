@@ -12,7 +12,7 @@ export default function Login() {
     const [logged, setLogged] = useState(false);
 
     function saveNameInCookies() {
-        Cookies.set('name', name)
+        Cookies.set('name', name);
     }
 
     useEffect(() => {
@@ -22,7 +22,7 @@ export default function Login() {
         if (moveitName.length > 2) {
             setSavedName(moveitName);
         }
-    })
+    }, [])
 
     return (
         <div className={styles.container}>
