@@ -37,14 +37,14 @@ If you completed the challenge, you will gain experience that will allow you to 
 
 <br/>
 
-![login](public/images/moveit-login.png)
+![login](public/internal-images/moveit-login.png)
 
 
 <br/>
 
-![login forward](public/images/moveit-login-forward.png)
+![login forward](public/internal-images/moveit-login-forward.png)
 
 
 <br/>
 
-![homepage](public/images/moveit-home.png)
+![homepage](public/internal-images/moveit-home.png)
