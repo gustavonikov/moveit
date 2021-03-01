@@ -21,4 +21,4 @@ yarn dev
 <li>ContextApi</li>
 <li>TypeScript</li>
 
-![homepage](/images/moveit-home.png)
+![homepage](public/images/moveit-home.png)
