@@ -49,7 +49,7 @@ export default function Login({ username }: LoginProps) {
                             <p>
                                 Cuide da sua saúde e melhore seu foco
                                 com move.it
-                        </p>
+                            </p>
 
                             <div className={styles.inputBox}>
                                 <input
