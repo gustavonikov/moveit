@@ -144,12 +144,16 @@
     .inputBox {
         width: 100%;
 
+        margin-top: 3.6rem;
+
         height: 4.3rem;
     }
 
     .inputBox input {
-        padding: 1rem;
         width: 3rem;
+
+        padding: 1rem;
+
         font-size: 1.15rem;
     }
 
