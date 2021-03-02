@@ -75,7 +75,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
     return {
         props: {
-            username: name,
+            username: String(name),
         }
     }
 }
