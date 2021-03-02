@@ -187,3 +187,19 @@
         margin-left: 6rem;
     }
 }
+
+@media screen and (min-width:601px) and (max-width: 800px) {
+    .container > img {
+        display: none;
+    }
+    
+    .section {
+        padding: 5rem;
+    }
+}
+
+@media screen and (min-width: 780px) and (max-height: 620px) {
+    .section {
+        margin-top: 2rem;
+    }
+}
