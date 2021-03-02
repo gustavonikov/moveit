@@ -22,7 +22,7 @@ export default function Login({ username }: LoginProps) {
 
     useEffect(() => {
         if (username) {
-            setLogged(true);
+            /* setLogged(true); */
             setSavedName(username);
         }
     }, [])
@@ -46,9 +46,8 @@ export default function Login({ username }: LoginProps) {
                         <strong>Bem-vindo</strong>
 
                         <p>
-                            Cuide da saúde do seu corpo com
-                            <br />
-                            move.it
+                            Cuide da sua saúde e melhore seu foco 
+                            com move.it
                         </p>
 
                         <div className={styles.inputBox}>
