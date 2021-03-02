@@ -22,7 +22,7 @@ export default function Login({ username }: LoginProps) {
 
     useEffect(() => {
         console.log(username)
-        if (username !== 'undefined' && username.length > 0) {
+        if (username) {
             setLogged(true);
             setSavedName(username);
         }
@@ -76,7 +76,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
     return {
         props: {
-            username: String(name),
+            username: name || null,
         }
     }
 }
