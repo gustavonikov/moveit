@@ -30,3 +30,9 @@
         gap: 2rem;
     }
 }
+
+@media screen and (min-width: 600px) and (max-width: 1366px) {
+    .container {
+        height: 100%;
+    }
+}

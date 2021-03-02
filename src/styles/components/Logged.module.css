@@ -1,5 +1,6 @@
 .container {
     width: 25rem;
+    
     margin: 17rem auto 0;
 
     padding: 3rem 1rem;
@@ -85,5 +86,31 @@
 
     .container h2 {
         font-size: 1.4rem;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1366px) {
+    .container {
+        margin-top: 6rem;
+    }
+
+    .container h2 {
+        font-size: 1.4rem;
+    }
+    
+    @keyframes entrance {
+        0% {
+            position: absolute;
+            left: 0%;
+        }
+    
+        80% {
+            position: absolute;
+            left: 53%;
+        }
+    
+        100% {
+            margin: 6rem auto 0;
+        }
     }
 }
