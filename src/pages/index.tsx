@@ -21,7 +21,8 @@ export default function Login({ username }: LoginProps) {
     }
 
     useEffect(() => {
-        if (username) {
+        console.log(username)
+        if (username !== 'undefined' && username.length > 0) {
             setLogged(true);
             setSavedName(username);
         }
