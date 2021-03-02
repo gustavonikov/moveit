@@ -2,7 +2,7 @@
 
 ## Purpose
 
-App made at Rocket Seat's event Next Level Week #04, which purpose is to help you to perfom and focus better on your activities, by a method that consists on a 25 minutes cycle, followed by a challenge (that can be a quickly exercise for your body or eyes).
+App made at Rocket Seat's event Next Level Week #04, which purpose is to help you to perfom and focus better on your screen activities and take care of your body health, using a method that consists on a 25 minutes cycle, followed by a challenge (that can be a quickly exercise for your body or eyes).
 
 
 ## Getting Started
