@@ -68,7 +68,13 @@
     border-bottom-left-radius: 5px;
 
     padding: 1.53rem 2rem;
+
 }
+
+.inputBox input:hover {
+    border: 1.5px solid #414AA3;
+}
+
 
 .inputBox input::placeholder {
     color: var(--text-highlight);
@@ -109,7 +115,6 @@
     .container {
         flex-direction: column;
         
-        height: 100%;
         min-height: 100%;
 
         padding-bottom: 5rem;
@@ -172,6 +177,10 @@
 }
 
 @media screen and (min-width:601px) and (max-width: 1366px) {
+    .container > img {
+        width: 28rem;
+    }
+
     .section {
         margin-top: 9rem;
         margin-left: 6rem;
