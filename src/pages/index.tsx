@@ -32,50 +32,50 @@ export default function Login({ username }: LoginProps) {
             <Head>
                 <title>Login - move.it</title>
             </Head>
-            
-            <img src="symbol.svg" alt="Símbolo moveit"/>
+
+            <img src="symbol.svg" alt="Símbolo moveit" />
 
             {
-                logged ? 
+                logged ?
                     <Logged name={savedName} />
-                :
-                (
-                    <div className={styles.section}>
-                        <img src="full-logo.svg" alt="Logo moveit"/>
+                    :
+                    (
+                        <div className={styles.section}>
+                            <img src="full-logo.svg" alt="Logo moveit" />
 
-                        <strong>Bem-vindo</strong>
+                            <strong>Bem-vindo</strong>
 
-                        <p>
-                            Cuide da sua saúde e melhore seu foco 
-                            com move.it
+                            <p>
+                                Cuide da sua saúde e melhore seu foco
+                                com move.it
                         </p>
 
-                        <div className={styles.inputBox}>
-                            <input 
-                                type="text"  
-                                placeholder="Digite seu nome"
-                                value={name}
-                                onChange={(ev) => setName(ev.target.value)} 
-                            />
-                            <Link href="/home">
-                                <button type="button" onClick={saveNameInCookies}>
-                                    <img src="icons/arrow.svg" alt="Seta para direita"/>
-                                </button>
-                            </Link>
+                            <div className={styles.inputBox}>
+                                <input
+                                    type="text"
+                                    placeholder="Digite seu nome"
+                                    value={name}
+                                    onChange={(ev) => setName(ev.target.value)}
+                                />
+                                <Link href="/home">
+                                    <button type="button" onClick={saveNameInCookies}>
+                                        <img src="icons/arrow.svg" alt="Seta para direita" />
+                                    </button>
+                                </Link>
+                            </div>
                         </div>
-                    </div>
-                )
+                    )
             }
         </div>
     );
 }
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-	const { name } = ctx.req.cookies;
+    const { name } = ctx.req.cookies;
 
-	return {
-		props: {
-			username: name,
-		}
-	}
+    return {
+        props: {
+            username: name,
+        }
+    }
 }
