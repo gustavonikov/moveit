@@ -1,5 +1,6 @@
-import { GetServerSideProps } from 'next';
 import { useContext } from 'react';
+import { IoPersonCircle } from 'react-icons/io5';
+
 import { ChallengesContext } from '../contexts/ChallengesContext';
 import styles from '../styles/components/Profile.module.css';
 
@@ -12,7 +13,7 @@ export default function Profile({ name }: ProfileProps) {
 
     return (
         <div className={styles.profileContainer}>
-            <img src="https://github.com/gustavonikov.png" alt="Gustavo Chaves"/>
+            <IoPersonCircle size={100} color="#252d3d" />
             <div>
                 <strong>{name}</strong>
                 <p>
