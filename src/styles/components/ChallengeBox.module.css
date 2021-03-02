@@ -119,7 +119,7 @@
     filter: brightness(0.9);
 }
 
-@media(max-width: 600px) {
+@media screen and (max-width: 600px) {
     
     .challengeNotActive strong {
         font-size: 1.25rem;
@@ -135,5 +135,11 @@
 
     .challengeActive footer {
         margin-top: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1366px) {
+    .challengeActive footer {
+        margin-top: 1rem;
     }
 }
