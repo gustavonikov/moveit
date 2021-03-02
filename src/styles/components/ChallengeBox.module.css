@@ -128,4 +128,12 @@
     .challengeNotActive p img {
         height: 5rem;
     }
+
+    .challengeActive main strong {
+        font-size: 1.8rem;
+    }
+
+    .challengeActive footer {
+        margin-top: 1.2rem;
+    }
 }
