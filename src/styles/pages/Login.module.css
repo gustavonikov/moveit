@@ -98,14 +98,14 @@
     height: 1.6rem;
 }
 
-@media(min-width: 1441px) {
+@media screen and (min-width: 1441px) {
     .section {
         margin-top: 15rem;
         margin-left: 25rem;
     }
 }
 
-@media(max-width: 600px) {
+@media screen and (max-width: 600px) {
     .container {
         flex-direction: column;
     }
@@ -157,7 +157,7 @@
     }
 }
 
-@media(min-width:601px) and (max-width: 1366px) {
+@media screen and (min-width:601px) and (max-width: 1366px) {
     .section {
         margin-top: 9rem;
     }
