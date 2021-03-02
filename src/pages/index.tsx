@@ -22,7 +22,7 @@ export default function Login({ username }: LoginProps) {
 
     useEffect(() => {
         if (username) {
-            setLogged(true);
+            /* setLogged(true); */
             setSavedName(username);
         }
     }, [])
