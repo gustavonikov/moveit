@@ -17,7 +17,7 @@ export default function Login({ username }: LoginProps) {
     const [logged, setLogged] = useState(false);
 
     function saveNameInCookies() {
-        Cookies.set('name', name);
+        Cookies.set('name', name, { expires: 30 });
     }
 
     useEffect(() => {
